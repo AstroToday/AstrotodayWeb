@@ -2,26 +2,85 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+/* <color name="purple_500">#FF6200EE</color>
+<color name="purple_200">#FFBB86FC</color>
+<color name="purple_700">#FF3700B3</color>
+<color name="teal_200">#FF03DAC5</color>
+<color name="teal_700">#FF018786</color>
+<color name="black">#FF000000</color>
+<color name="white">#FFFFFFFF</color>
+<color name="maincolor">#fff</color>
+<color name="usecolor">#000</color>
+<color name="otp_bg">#FFF1E6</color>
+<color name="edit_txt_bg_color">#14000000</color>
+<color name="color_theme">#FF872B</color>
+<color name="color_theme_light">#BAFFAB00</color>
+<color name="bg">#ECECEC</color>
+<color name="toolbar_theme_white">#FAFAFA</color>
+<color name="toolbarbg">#FAFAFA</color>
+<color name="myaccountbg">#14FF872B</color> */
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer components {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  .navigation-list li {
+    @apply hover:bg-[#ececec] h-full flex items-center justify-center px-4 cursor-pointer;
+  }
+  .banner-gradient {
+    @apply bg-[linear-gradient(60deg,#ff872bb3,#fff_75%)];
+  }
+  .banner-features div {
+    @apply w-1/4 bg-white h-[9.4rem] rounded-lg flex flex-col;
+  }
+  .shadowBtn-Home {
+    box-shadow: 0 3px 20px #ffa32b;
+  }
+  .shadowBtn-Home:hover {
+    box-shadow: 0 3px 30px #ff872b;
+  }
+  .OurAstrologerCard {
+    box-shadow: rgba(0, 0, 0, 0.35) 0 4px 14px;
+    /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3.5px 9.5px;  */
+  }
+  .OurAstrologerCard:hover {
+    box-shadow: 0 3px 5px #ff872b;
+  }
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .rating .far {
+    opacity: 0.5;
+  }
+  .rating svg {
+    width: 1.6rem;
+    height: 1.2rem;
+  }
+  .review-rating svg {
+    width: 1.25rem;
+    height: 1rem;
+  }
+  .publisher-list div {
+    @apply w-[13rem] h-[7.5rem] border-primary bg-white flex items-center justify-center rounded-[0.63rem] p-5 cursor-pointer hover:shadow-[0_2px_12px_#FF872B] transition-shadow duration-500 ease-in-out;
+  }
+  .blog-card-shadow {
+    @apply shadow-[rgba(0,0,0,0.35)_0px_4.2px_13.5px] hover:shadow-[rgba(0,0,0,0.3)_0px_19px_38px,rgba(0,0,0,0.22)_0px_15px_12px] transition-all duration-200;
+  }
+  .astrotodayreviewcard {
+    @apply shadow-[0_8px_12px_#EE4E5E33];
+  }
+  .abt-astrology-row p {
+    @apply mb-3 text-[15px] leading-[22.5px];
+  }
+  .abt-astrology-row h3 {
+    @apply my-3 text-xl font-semibold;
+  }
+  .bgBanner {
+    @apply relative
+    w-full bg-[url('https://cdn.anytimeastro.com/dashaspeaks/web/content/anytimeastro/images/banner_bg.png')]
+    bg-[#180d19]  pt-11 pb-36 flex flex-col mb-12;
+  }
 }
