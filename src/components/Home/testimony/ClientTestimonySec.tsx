@@ -1,5 +1,6 @@
 import CardsCarousel from '@/components/Home/Shared/CardsCarousel';
 import addCardType from '@/Helpers/Home/AddCardType';
+import { AstrotodayTestimonyCardType } from '@/Types/Home/CustomerTestimony';
 import { clientTestimoniesData } from '@/utils/data';
 
 const ClientTestimonySec = () => {
@@ -16,8 +17,12 @@ const ClientTestimonySec = () => {
       </div>
       <div className="mt-3">
         <CardsCarousel
-          // @ts-expect-error todo: Fix this.
-          cards={addCardType(clientTestimoniesData, 'reviewCard')}
+          cards={
+            addCardType(
+              clientTestimoniesData,
+              'reviewCard'
+            ) as AstrotodayTestimonyCardType[]
+          }
           cards_to_show={3}
         />
       </div>

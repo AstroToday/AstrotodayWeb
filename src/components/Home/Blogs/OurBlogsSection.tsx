@@ -1,5 +1,6 @@
 import CardsCarousel from '@/components/Home/Shared/CardsCarousel';
 import addCardType from '@/Helpers/Home/AddCardType';
+import { BlogCardType } from '@/Types/Home/Blogs';
 import { blogData } from '@/utils/data';
 
 const OurBlogsSection = () => {
@@ -18,8 +19,7 @@ const OurBlogsSection = () => {
       </div>
       <div className="mt-3">
         <CardsCarousel
-          // @ts-expect-error todo: fix this.
-          cards={addCardType(blogData, 'Blog')}
+          cards={addCardType(blogData, 'Blog') as BlogCardType[]}
           cards_to_show={3}
         />
       </div>

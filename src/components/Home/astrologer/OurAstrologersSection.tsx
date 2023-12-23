@@ -1,5 +1,6 @@
 import CardsCarousel from '@/components/Home/Shared/CardsCarousel';
 import addCardType from '@/Helpers/Home/AddCardType';
+import { AstrologerCardType } from '@/Types/Home/astrologers';
 import { astrologerData } from '@/utils/data';
 
 const OurAstrologersSection = () => {
@@ -20,8 +21,12 @@ const OurAstrologersSection = () => {
       </div>
       <div className="astrotoday-astrologers-cards mt-3">
         <CardsCarousel
-          //@ts-expect-error todo: fix this.
-          cards={addCardType(astrologerData, 'astrologerCard')}
+          cards={
+            addCardType(
+              astrologerData,
+              'astrologerCard'
+            ) as AstrologerCardType[]
+          }
           cards_to_show={5}
         />
       </div>

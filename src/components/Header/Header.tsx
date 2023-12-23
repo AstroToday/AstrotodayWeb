@@ -11,9 +11,9 @@ const Header = () => {
     setIsModalOpen(true);
   };
 
-  // const closeModal = () => {
-  //   setIsModalOpen(false);
-  // };
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
 
   return (
     <div className="container h-20 flex justify-around items-center">
@@ -78,7 +78,7 @@ const Header = () => {
         </button>
         <button
           className="flex items-center justify-center bg-primary rounded-md py-0
-        hover:opacity-90 active:opacity-70 transition-opacity duration-[160ms]"
+        hover:opacity-80 active:opacity-70 transition-opacity duration-[160ms]"
           onClick={openModal}
         >
           <span className="text-sm text-white px-2 font-medium">
@@ -88,7 +88,7 @@ const Header = () => {
         {isModalOpen && (
           <div className="">
             {' '}
-            <LoginPopup /*onClose={closeModal}*/ />{' '}
+            <LoginPopup onClose={closeModal} />{' '}
           </div>
         )}
       </div>
