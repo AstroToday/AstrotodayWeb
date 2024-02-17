@@ -16,7 +16,7 @@ const Home = () => {
           <div className="relative container">
             <AdBanner />
           </div>
-          <div className="flex space-x-5 w-full justify-center absolute top-[454px]">
+          <div className="flex space-x-5 w-full justify-center absolute top-[  x]">
             <AdBannerButton useChat={true} />
             <AdBannerButton useChat={false} />
           </div>

@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import LoginPopup from '@/components/Modals/LoginPopup';
+import LoginPopup from '@/components/Modals/Login/LoginPopup';
 import { ASTROTODAY_LOGO_DIMENSIONS } from '@/constants/Home';
 const Header = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
