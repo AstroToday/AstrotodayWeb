@@ -10,6 +10,7 @@ import Faq from '@/components/Home/Shared/Faq';
 
 const Home = () => {
   return (
+    // TODO: Complete the app before april 15th
     <div>
       <section>
         <div className="bgBanner">
